@@ -1,0 +1,162 @@
+name: ProxyNaut
+options:
+  bundleIdPrefix: com.proxynaut
+  deploymentTarget: "17.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+schemes:
+  ProxyNaut:
+    build:
+      targets:
+        ContainerApp: all
+        ProxyExtension: all
+    run:
+      config: Debug
+
+    test:
+      config: Debug
+      targets:
+        - ProxyNautTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+  ContainerApp:
+    build:
+      targets:
+        ContainerApp: all
+        ProxyExtension: all
+    run:
+      config: Debug
+
+    test:
+      config: Debug
+      targets:
+        - ProxyNautTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
+  ProxyNautTests:
+    build:
+      targets:
+        ProxyNautTests: all
+    run:
+      config: Debug
+
+    test:
+      config: Debug
+      targets:
+        - ProxyNautTests
+
+
+targets:
+  ContainerApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: ContainerApp/ProxyNaut
+
+      - path: ContainerApp/Assets.xcassets
+      - path: Shared
+        excludes:
+          - "*.dat"
+          - "*.db"
+      - path: Shared/geoip.db
+        type: file
+      - path: Shared/geosite.db
+        type: file
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.proxynaut.container
+        PRODUCT_NAME: ProxyNaut
+        INFOPLIST_FILE: ContainerApp/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        DEVELOPMENT_TEAM: "S6879U77Q2"
+        CODE_SIGN_STYLE: Automatic
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        OTHER_LDFLAGS: -framework NetworkExtension -framework UIKit -framework ActivityKit
+    dependencies:
+      - target: ProxyExtension
+        embed: true
+        codeSign: true
+        copy:
+          destination: plugins
+      - framework: Frameworks/Libbox.xcframework
+        embed: false
+      - sdk: UIKit.framework
+
+    entitlements:
+      path: ContainerApp/ProxyNaut.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.proxynaut
+        com.apple.developer.networking.networkextension:
+          - packet-tunnel-provider
+
+  ProxyExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: ProxyExtension
+      - path: Shared
+        buildPhase: sources
+        excludes:
+          - "*.dat"
+          - "*.db"
+      - path: Shared/geoip.db
+        type: file
+      - path: Shared/geosite.db
+        type: file
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.proxynaut.container.ProxyExtension
+      WRAPPER_EXTENSION: appex
+      PRODUCT_NAME: ProxyExtension
+      INFOPLIST_FILE: ProxyExtension/Info.plist
+      CODE_SIGN_STYLE: Automatic
+      DEVELOPMENT_TEAM: "S6879U77Q2"
+      IPHONEOS_DEPLOYMENT_TARGET: "16.1"
+      SKIP_INSTALL: YES
+      OTHER_SWIFT_FLAGS: -D IS_EXTENSION
+      OTHER_LDFLAGS: -framework NetworkExtension -framework UIKit
+    dependencies:
+      - framework: Frameworks/Libbox.xcframework
+        embed: false
+      - sdk: UIKit.framework
+
+    entitlements:
+      path: ProxyExtension/ProxyExtension.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.proxynaut
+        com.apple.developer.networking.networkextension:
+          - packet-tunnel-provider
+
+  ProxyNautTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.proxynaut.tests
+        PRODUCT_NAME: ProxyNautTests
+        INFOPLIST_FILE: Tests/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: "S6879U77Q2"
+    dependencies:
+      - target: ContainerApp
+
+# 集成建议：
+# 由于 sing-box 官方不直接提供 SPM 二进制包，建议从 SagerNet 获取 Libbox.xcframework 
+# 并将其放入项目根目录下的 Frameworks 文件夹，然后在 Xcode 中手动关联。

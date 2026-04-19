@@ -1,0 +1,15 @@
+# 机场订阅源测试URL列表
+# 来源: GitHub上的免费节点项目
+# 更新时间: 2026-04-17
+
+# 1. danmaifu/mianfeijiedian - 每日更新，包含SS/Trojan/VLESS等节点 (52个节点)
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260414.yaml
+
+# 2. vxiaov/free_proxies - 免费代理池分享 (26个节点)
+https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
+
+# 3. freenodes/freenodes - 配置模板（使用proxy-providers引用节点）
+https://raw.githubusercontent.com/freenodes/freenodes/main/ClashPremiumFree.yaml
+
+# 4. Softlyx/Clash - 配置模板
+https://raw.githubusercontent.com/Softlyx/Clash/main/Config.yaml

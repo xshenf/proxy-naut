@@ -1,0 +1,74 @@
+scratch/run_bug_tests.swift:2460:2: error: consecutive statements on a line must be separated by ';'
+2458 | extension Notification.Name {
+2459 |     static let nodeSelectionChanged = Notification.Name("nodeSelectionChanged")
+2460 | }import Foundation
+     |  `- error: consecutive statements on a line must be separated by ';'
+2461 | 
+2462 | // These are cases where the current parser might fail
+
+scratch/run_bug_tests.swift:1007:34: warning: 'init(contentsOf:)' was deprecated in macOS 15: Use `init(contentsOf:encoding:)` instead [#DeprecatedDeclaration]
+1005 |     private func loadLogsFromFile() {
+1006 |         guard let url = logFileURL, FileManager.default.fileExists(atPath: url.path) else { return }
+1007 |         guard let content = try? String(contentsOf: url) else { return }
+     |                                  `- warning: 'init(contentsOf:)' was deprecated in macOS 15: Use `init(contentsOf:encoding:)` instead [#DeprecatedDeclaration]
+1008 |         let lines = content.components(separatedBy: "\n").filter { !$0.isEmpty }
+1009 |         let decoder = JSONDecoder()
+
+scratch/run_bug_tests.swift:1765:13: warning: variable 'config' was never mutated; consider changing to 'let' constant
+1763 |         print("Fetching: \(url)")
+1764 |         
+1765 |         var config = URLSessionConfiguration.default
+     |             `- warning: variable 'config' was never mutated; consider changing to 'let' constant
+1766 |         config.httpCookieAcceptPolicy = .always
+1767 |         config.httpShouldSetCookies = true
+
+scratch/run_bug_tests.swift:1781:13: warning: variable 'lastError' was written to, but never read
+1779 |         request.setValue("1", forHTTPHeaderField: "Upgrade-Insecure-Requests")
+1780 |         
+1781 |         var lastError: Error?
+     |             `- warning: variable 'lastError' was written to, but never read
+1782 |         var lastData: Data?
+1783 |         
+
+scratch/run_bug_tests.swift:2347:25: warning: comparing non-optional value of type 'URLResponse' to 'nil' always returns true
+2345 |         do {
+2346 |             let (_, response) = try await URLSession.shared.data(for: request)
+2347 |             if response != nil {
+     |                         `- warning: comparing non-optional value of type 'URLResponse' to 'nil' always returns true
+2348 |                 let latency = Int((CFAbsoluteTimeGetCurrent() - startTime) * 1000)
+2349 |                 return latency
+
+scratch/run_bug_tests.swift:2404:25: warning: reference to captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2402 |                 switch state {
+2403 |                 case .ready:
+2404 |                     if !completed {
+     |                         `- warning: reference to captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2405 |                         completed = true
+2406 |                         let endTime = CFAbsoluteTimeGetCurrent()
+
+scratch/run_bug_tests.swift:2405:25: warning: mutation of captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2403 |                 case .ready:
+2404 |                     if !completed {
+2405 |                         completed = true
+     |                         `- warning: mutation of captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2406 |                         let endTime = CFAbsoluteTimeGetCurrent()
+2407 |                         connection.cancel()
+
+scratch/run_bug_tests.swift:2413:25: warning: reference to captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2411 |                     }
+2412 |                 case .failed, .cancelled:
+2413 |                     if !completed {
+     |                         `- warning: reference to captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2414 |                         completed = true
+2415 |                         continuation.resume(returning: -2)
+
+scratch/run_bug_tests.swift:2414:25: warning: mutation of captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2412 |                 case .failed, .cancelled:
+2413 |                     if !completed {
+2414 |                         completed = true
+     |                         `- warning: mutation of captured var 'completed' in concurrently-executing code; this is an error in the Swift 6 language mode [#SendableClosureCaptures]
+2415 |                         continuation.resume(returning: -2)
+2416 |                     }
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+[#SendableClosureCaptures]: <https://docs.swift.org/compiler/documentation/diagnostics/sendable-closure-captures>

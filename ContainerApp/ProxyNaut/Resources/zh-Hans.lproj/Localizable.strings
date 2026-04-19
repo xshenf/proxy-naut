@@ -1,0 +1,247 @@
+/* Tab Labels */
+"tab.proxy" = "代理";
+"tab.subscriptions" = "订阅";
+"tab.rules" = "规则";
+"tab.logs" = "日志";
+"tab.settings" = "设置";
+
+/* Statistics */
+"stat.upload" = "上传";
+"stat.download" = "下载";
+"stat.connections" = "连接数";
+"stat.upload_speed" = "上传速度";
+"stat.download_speed" = "下载速度";
+
+/* Node List View */
+"nav.proxy_nodes" = "代理节点";
+"menu.add_subscription" = "添加订阅";
+"menu.add_custom_proxy" = "添加自定义代理";
+"menu.refresh_all" = "刷新全部";
+"empty.no_subscription" = "尚未添加订阅";
+"empty.add_subscription" = "添加订阅链接以获取最新的代理节点";
+"empty.select_subscription" = "请从订阅页面选择一个订阅以查看节点";
+"empty.no_nodes" = "暂无节点，请刷新订阅";
+"button.add" = "添加";
+"error.select_node_first" = "请先选择一个节点";
+"error.http_disabled" = "HTTP/HTTPS 代理已禁用，请使用 VPN 模式";
+"error.socks5_disabled" = "SOCKS5 代理已禁用，请使用 VPN 模式";
+"testing" = "正在测试连通性...";
+"test.google_success" = "Google: ✅ 畅通";
+"test.google_failed" = "Google: ❌ 无法访问";
+
+/* Add Subscription Sheet */
+"nav.add_subscription" = "添加订阅";
+"section.subscription_info" = "订阅信息";
+"label.name" = "名称";
+"label.url" = "链接";
+"label.scan_qr_code" = "扫描二维码";
+"label.auto_update" = "自动更新";
+"label.enable_auto_update" = "启用自动更新";
+"section.information" = "信息";
+"section.auto_update" = "自动更新";
+"button.cancel" = "取消";
+"button.save" = "保存";
+"button.delete" = "删除";
+
+/* Settings */
+"nav.settings" = "设置";
+"section.routing_mode" = "路由模式";
+"section.advanced_networking" = "高级网络";
+"section.dns_settings" = "DNS 设置";
+"section.about" = "关于";
+"label.mode" = "模式";
+"label.dns_servers" = "DNS 服务器（逗号分隔）";
+"label.doh_url" = "DoH 链接";
+"label.dns_over_https" = "DNS over HTTPS";
+"label.bypass_china_ip" = "绕过中国 IP";
+"label.enhanced_ad_blocking" = "增强广告拦截";
+"label.force_dns_vpn" = "强制 DNS 经过 VPN";
+"label.version" = "版本";
+"routing.rule" = "规则";
+"routing.global" = "全局";
+"routing.direct" = "直连";
+"routing.rule_desc" = "根据代理规则（域名、IP等）路由流量";
+"routing.global_desc" = "所有流量经过所选代理";
+"routing.direct_desc" = "直连，不经过代理";
+"setting.bypass_desc" = "国内流量不经 VPN，直连物理网络以获得原生速度。";
+"setting.force_dns_desc" = "即使开启绕过中国 IP，仍强制 DNS 进入隧道进行广告拦截。";
+
+/* Rules View */
+"nav.rules" = "规则";
+"section.rule_source" = "规则来源";
+"section.smart_packages" = "智能规则包";
+"section.manual_rules" = "手动规则";
+"rules.tab.subscriptions" = "订阅规则";
+"rules.tab.manual" = "手动";
+"rules.section.custom_subs" = "自定义规则订阅";
+"rules.section.node_subs" = "节点订阅自带规则";
+"rules.node_subs.empty" = "暂无节点订阅";
+"rules.node_subs.footer" = "修改后需重新连接或切换节点后生效。";
+"rules.node_subs.preview_note" = "仅显示前 %d 条规则。";
+"label.pattern" = "模式";
+"label.rule_type" = "规则类型";
+"label.action" = "动作";
+"label.total_rules" = "规则总数";
+"button.refresh_all" = "刷新全部";
+"button.clear_all" = "清除全部";
+"empty.no_rules" = "暂无规则，添加一个或恢复默认。";
+"empty.fetching" = "正在获取规则...";
+"ruleset.base_desc" = "启用针对 Apple、中国域名的优化路由及基础广告拦截。";
+"ruleset.base_title" = "全局基础规则包";
+"ruleset.internal" = "内置规则";
+"ruleset.empty_base" = "暂无基础规则。";
+"ruleset.reset_defaults" = "恢复官方默认";
+"ruleset.base_ruleset" = "基础规则包";
+"ruleset.reset_alert_title" = "重置规则包？";
+"ruleset.reset_alert_message" = "这将恢复系统资源中的原始 140+ 条规则。";
+"ruleset.reset_button" = "重置";
+"rule.delete" = "删除";
+"rule.edit" = "编辑";
+"rule.clear_all" = "清除所有手动规则";
+"rule.refresh_all" = "刷新所有订阅";
+"rule.add_title" = "添加规则";
+"rule.edit_title" = "编辑规则";
+"rule.save" = "保存";
+"rule.cancel" = "取消";
+"rule.add_subscription_title" = "添加规则订阅";
+"rule.add_button" = "添加";
+"rule.custom_rule_default" = "自定义规则";
+"rule.section_custom" = "自定义订阅";
+"rule.section_options" = "选项";
+"rule.section_popular" = "热门订阅";
+"rule.name_placeholder" = "名称（例如：我的广告拦截）";
+"rule.url_placeholder" = "规则链接（https://...）";
+"rule.auto_update" = "自动更新";
+"rule.update_interval" = "更新间隔";
+"rule.detail_info" = "信息";
+"rule.detail_name" = "名称";
+"rule.detail_rules" = "规则";
+"rule.detail_last_update" = "最后更新";
+"rule.detail_manual" = "手动";
+"rule.detail_url" = "链接";
+"rule.detail_remove" = "移除订阅";
+"rule.detail_done" = "完成";
+"rule.rules_count" = "条规则";
+"rule.last_updated" = "最后更新：";
+"rule.source" = "来源";
+"rule.preview_limit_note" = "仅显示前 %d 条规则。";
+
+/* Logs View */
+"nav.logs" = "日志";
+"section.log_level" = "日志级别";
+"section.common_filters" = "常用筛选";
+"section.route_action" = "路由动作";
+"label.search" = "搜索消息...";
+"label.level" = "级别";
+"label.action" = "动作";
+"label.hide_dns" = "隐藏 DNS";
+"label.only_routing" = "仅路由";
+"label.auto_scroll" = "自动滚动";
+"label.clear_logs" = "清除日志";
+"label.export_logs" = "导出日志";
+"label.filter" = "筛选";
+"level.all" = "全部";
+"level.info" = "信息";
+"level.warning" = "警告";
+"level.error" = "错误";
+"route.all" = "全部";
+"route.direct" = "直连";
+"route.proxy" = "代理";
+"route.reject" = "拒绝";
+"empty.no_logs" = "无日志";
+"empty.no_logs_desc" = "没有找到匹配的日志";
+"label.clear_logs" = "清除日志";
+"label.export_logs" = "导出日志";
+"section.log_level" = "日志级别";
+"section.common_filters" = "常用筛选";
+"section.route_action" = "路由动作";
+
+/* Custom Node */
+"nav.add_custom_proxy" = "添加自定义代理";
+"section.import_link" = "从链接导入";
+"section.basic_config" = "基本配置";
+"section.authentication" = "认证";
+"section.transport" = "传输";
+"section.reality_config" = "Reality 配置（可选）";
+"label.protocol" = "协议";
+"label.server_address" = "服务器地址";
+"label.port" = "端口";
+"label.uuid" = "UUID";
+"label.password" = "密码";
+"label.network" = "网络";
+"label.enable_tls" = "启用 TLS";
+"label.enable_multiplex" = "启用多路复用";
+"button.parse_link" = "解析链接";
+"button.save_node" = "保存";
+
+/* Links */
+"link.github" = "GitHub";
+"link.privacy_policy" = "隐私政策";
+"section.routing_data" = "路由数据";
+"section.language" = "语言";
+"routing.data_maintained" = "数据由内置资源自动维护";
+"label.language" = "语言";
+"label.max_rules" = "最大规则数量";
+"label.system" = "跟随系统";
+"label.custom_rule_url" = "规则链接（https://...）";
+"label.custom_subscription" = "自定义订阅";
+"label.popular_subscriptions" = "热门订阅";
+"section.options" = "选项";
+"section.preset_subscriptions" = "预设订阅";
+"nav.add_rule" = "添加规则";
+"placeholder.domain_ip_cidr" = "域名、IP 或 CIDR";
+"action.direct" = "直连";
+"action.proxy" = "代理";
+"action.reject" = "拒绝";
+"popular.gfwlist" = "GFW List (代理规则)";
+"popular.china_domains" = "China Domains (直连规则)";
+"popular.anti_ad" = "anti-AD (广告拦截)";
+"rule_type.domain" = "域名";
+"rule_type.domainSuffix" = "域名后缀";
+"rule_type.domainKeyword" = "域名关键词";
+"rule_type.geosite" = "GeoSite";
+"rule_type.ipCIDR" = "IP CIDR";
+"rule_type.geoip" = "GeoIP";
+"rule_type.port" = "端口";
+"rule_type.final" = "最终匹配";
+"update_interval.manual" = "手动";
+"update_interval.hourly" = "每小时";
+"update_interval.daily" = "每天";
+"update_interval.weekly" = "每周";
+"label.default" = "默认";
+
+/* Proxy Groups */
+"group.auto_select" = "自动选择";
+"group.fallback" = "故障转移";
+"group.default" = "默认";
+
+/* Regions */
+"region.hk" = "🇭🇰 香港";
+"region.tw" = "🇹🇼 台湾";
+"region.jp" = "🇯🇵 日本";
+"region.sg" = "🇸🇬 新加坡";
+"region.us" = "🇺🇸 美国";
+"region.kr" = "🇰🇷 韩国";
+"region.uk" = "🇬🇧 英国";
+"region.de" = "🇩🇪 德国";
+"region.fr" = "🇫🇷 法国";
+"region.au" = "🇦🇺 澳大利亚";
+"region.ca" = "🇨🇦 加拿大";
+"region.private" = "⚡ 专线";
+"region.other" = "🌐 其他";
+
+/* Filter */
+"filter.hide_timeout" = "隐藏超时节点";
+"empty.all_nodes_timeout" = "所有节点都已超时，请检查网络或刷新订阅";
+
+"sub.empty_title" = "暂无订阅";
+"sub.empty_desc" = "添加订阅链接以获取最新的代理节点";
+"sub.edit" = "编辑";
+"sub.refresh" = "刷新";
+"sub.delete" = "删除";
+"sub.active" = "活动中";
+"sub.nodes_count" = "个节点";
+"sub.updated_at" = "更新于：";
+"sub.nav_edit" = "编辑订阅";
+"sub.delete_button" = "删除订阅";
+"rule.never_updated" = "从未更新";

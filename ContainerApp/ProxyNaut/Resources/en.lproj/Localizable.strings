@@ -1,0 +1,247 @@
+/* Tab Labels */
+"tab.proxy" = "Proxy";
+"tab.subscriptions" = "Subscriptions";
+"tab.rules" = "Rules";
+"tab.logs" = "Logs";
+"tab.settings" = "Settings";
+
+/* Statistics */
+"stat.upload" = "Upload";
+"stat.download" = "Download";
+"stat.connections" = "Connections";
+"stat.upload_speed" = "Upload Speed";
+"stat.download_speed" = "Download Speed";
+
+/* Node List View */
+"nav.proxy_nodes" = "Proxy Nodes";
+"menu.add_subscription" = "Add Subscription";
+"menu.add_custom_proxy" = "Add Custom Proxy";
+"menu.refresh_all" = "Refresh All";
+"empty.no_subscription" = "No Subscriptions";
+"empty.add_subscription" = "Add subscription links to get proxy nodes";
+"empty.select_subscription" = "Select a subscription from the Subscriptions tab to view nodes";
+"empty.no_nodes" = "No nodes, please refresh subscription";
+"button.add" = "Add";
+"error.select_node_first" = "Please select a node first";
+"error.http_disabled" = "HTTP/HTTPS proxy disabled, please use VPN mode";
+"error.socks5_disabled" = "SOCKS5 proxy disabled, please use VPN mode";
+"testing" = "Testing connectivity...";
+"test.google_success" = "Google: OK";
+"test.google_failed" = "Google: Failed";
+
+/* Add Subscription Sheet */
+"nav.add_subscription" = "Add Subscription";
+"section.subscription_info" = "Subscription Info";
+"label.name" = "Name";
+"label.url" = "URL";
+"label.scan_qr_code" = "Scan QR Code";
+"label.auto_update" = "Auto Update";
+"label.enable_auto_update" = "Enable Auto Update";
+"section.information" = "Information";
+"section.auto_update" = "Auto Update";
+"button.cancel" = "Cancel";
+"button.save" = "Save";
+"button.delete" = "Delete";
+
+/* Settings */
+"nav.settings" = "Settings";
+"section.routing_mode" = "Routing Mode";
+"section.advanced_networking" = "Advanced Networking";
+"section.dns_settings" = "DNS Settings";
+"section.about" = "About";
+"label.mode" = "Mode";
+"label.dns_servers" = "DNS Servers (comma separated)";
+"label.doh_url" = "DoH URL";
+"label.dns_over_https" = "DNS over HTTPS";
+"label.bypass_china_ip" = "Bypass China IP";
+"label.enhanced_ad_blocking" = "Enhanced Ad Blocking";
+"label.force_dns_vpn" = "Force DNS through VPN";
+"label.version" = "Version";
+"routing.rule" = "Rule";
+"routing.global" = "Global";
+"routing.direct" = "Direct";
+"routing.rule_desc" = "Route traffic based on proxy rules (domain, IP, etc.)";
+"routing.global_desc" = "Route all traffic through the selected proxy";
+"routing.direct_desc" = "Direct connection without proxy";
+"setting.bypass_desc" = "Domestic traffic goes directly without VPN for native speed.";
+"setting.force_dns_desc" = "Even with China IP bypass enabled, force DNS into tunnel for ad blocking.";
+
+/* Rules View */
+"nav.rules" = "Rules";
+"section.rule_source" = "Rule Source";
+"section.smart_packages" = "Smart Packages";
+"section.manual_rules" = "Manual Rules";
+"rules.tab.subscriptions" = "Subscriptions";
+"rules.tab.manual" = "Manual";
+"rules.section.custom_subs" = "Custom Rule Subscriptions";
+"rules.section.node_subs" = "Rules from Node Subscriptions";
+"rules.node_subs.empty" = "No node subscriptions yet";
+"rules.node_subs.footer" = "Changes take effect on next connection or node switch.";
+"rules.node_subs.preview_note" = "Showing first %d rules only.";
+"label.pattern" = "Pattern";
+"label.rule_type" = "Rule Type";
+"label.action" = "Action";
+"label.total_rules" = "Total Rules";
+"button.refresh_all" = "Refresh All";
+"button.clear_all" = "Clear All";
+"empty.no_rules" = "No rules found. Add one or reset to defaults.";
+"empty.fetching" = "Fetching rules...";
+"ruleset.base_desc" = "Enables optimized routing for Apple, China domains, and basic ad-blocking.";
+"ruleset.base_title" = "Global Base Ruleset";
+"ruleset.internal" = "Internal Rules";
+"ruleset.empty_base" = "No base rules found.";
+"ruleset.reset_defaults" = "Reset to Official Defaults";
+"ruleset.base_ruleset" = "Base Ruleset";
+"ruleset.reset_alert_title" = "Reset Ruleset?";
+"ruleset.reset_alert_message" = "This will restore the original 140+ rules from the system resources.";
+"ruleset.reset_button" = "Reset";
+"rule.delete" = "Delete";
+"rule.edit" = "Edit";
+"rule.clear_all" = "Clear All Manual Rules";
+"rule.refresh_all" = "Refresh All Subscriptions";
+"rule.add_title" = "Add Rule";
+"rule.edit_title" = "Edit Rule";
+"rule.save" = "Save";
+"rule.cancel" = "Cancel";
+"rule.add_subscription_title" = "Add Rule Subscription";
+"rule.add_button" = "Add";
+"rule.custom_rule_default" = "Custom Rule";
+"rule.section_custom" = "Custom Subscription";
+"rule.section_options" = "Options";
+"rule.section_popular" = "Popular Subscriptions";
+"rule.name_placeholder" = "Name (e.g., My AdBlock)";
+"rule.url_placeholder" = "Rule URL (https://...)";
+"rule.auto_update" = "Auto Update";
+"rule.update_interval" = "Update Interval";
+"rule.detail_info" = "Info";
+"rule.detail_name" = "Name";
+"rule.detail_rules" = "Rules";
+"rule.detail_last_update" = "Last Update";
+"rule.detail_manual" = "Manual";
+"rule.detail_url" = "URL";
+"rule.detail_remove" = "Remove Subscription";
+"rule.detail_done" = "Done";
+"rule.rules_count" = "rules";
+"rule.last_updated" = "Last updated:";
+"rule.source" = "Source";
+"rule.preview_limit_note" = "Showing first %d rules only.";
+
+/* Logs View */
+"nav.logs" = "Logs";
+"section.log_level" = "Log Level";
+"section.common_filters" = "Common Filters";
+"section.route_action" = "Route Action";
+"label.search" = "Search messages...";
+"label.level" = "Level";
+"label.action" = "Action";
+"label.hide_dns" = "Hide DNS";
+"label.only_routing" = "Only Routing";
+"label.auto_scroll" = "Auto Scroll";
+"label.clear_logs" = "Clear Logs";
+"label.export_logs" = "Export Logs";
+"label.filter" = "Filter";
+"level.all" = "All";
+"level.info" = "Info";
+"level.warning" = "Warning";
+"level.error" = "Error";
+"route.all" = "All";
+"route.direct" = "Direct";
+"route.proxy" = "Proxy";
+"route.reject" = "Reject";
+"empty.no_logs" = "No Logs";
+"empty.no_logs_desc" = "No logs found matching your filter";
+"label.clear_logs" = "Clear Logs";
+"label.export_logs" = "Export Logs";
+"section.log_level" = "Log Level";
+"section.common_filters" = "Common Filters";
+"section.route_action" = "Route Action";
+
+/* Custom Node */
+"nav.add_custom_proxy" = "Add Custom Proxy";
+"section.import_link" = "Import from Link";
+"section.basic_config" = "Basic Configuration";
+"section.authentication" = "Authentication";
+"section.transport" = "Transport";
+"section.reality_config" = "Reality Config (Optional)";
+"label.protocol" = "Protocol";
+"label.server_address" = "Server Address";
+"label.port" = "Port";
+"label.uuid" = "UUID";
+"label.password" = "Password";
+"label.network" = "Network";
+"label.enable_tls" = "Enable TLS";
+"label.enable_multiplex" = "Enable Multiplex";
+"button.parse_link" = "Parse Link";
+"button.save_node" = "Save";
+
+/* Links */
+"link.github" = "GitHub";
+"link.privacy_policy" = "Privacy Policy";
+"section.routing_data" = "Routing Data";
+"section.language" = "Language";
+"routing.data_maintained" = "Data automatically maintained by built-in resources";
+"label.language" = "Language";
+"label.max_rules" = "Max Rules Count";
+"label.system" = "System";
+"label.custom_rule_url" = "Rule URL (https://...)";
+"label.custom_subscription" = "Custom Subscription";
+"label.popular_subscriptions" = "Popular Subscriptions";
+"section.options" = "Options";
+"section.preset_subscriptions" = "Preset Subscriptions";
+"nav.add_rule" = "Add Rule";
+"placeholder.domain_ip_cidr" = "Domain, IP, or CIDR";
+"action.direct" = "Direct";
+"action.proxy" = "Proxy";
+"action.reject" = "Reject";
+"popular.gfwlist" = "GFW List (Proxy Rules)";
+"popular.china_domains" = "China Domains (Direct Rules)";
+"popular.anti_ad" = "anti-AD (Ad Blocking)";
+"rule_type.domain" = "Domain";
+"rule_type.domainSuffix" = "Domain Suffix";
+"rule_type.domainKeyword" = "Domain Keyword";
+"rule_type.geosite" = "GeoSite";
+"rule_type.ipCIDR" = "IP CIDR";
+"rule_type.geoip" = "GeoIP";
+"rule_type.port" = "Port";
+"rule_type.final" = "Final Match";
+"update_interval.manual" = "Manual";
+"update_interval.hourly" = "Hourly";
+"update_interval.daily" = "Daily";
+"update_interval.weekly" = "Weekly";
+"label.default" = "Default";
+
+/* Proxy Groups */
+"group.auto_select" = "Auto Select";
+"group.fallback" = "Fallback";
+"group.default" = "Default";
+
+/* Regions */
+"region.hk" = "🇭🇰 Hong Kong";
+"region.tw" = "🇹🇼 Taiwan";
+"region.jp" = "🇯🇵 Japan";
+"region.sg" = "🇸🇬 Singapore";
+"region.us" = "🇺🇸 USA";
+"region.kr" = "🇰🇷 South Korea";
+"region.uk" = "🇬🇧 UK";
+"region.de" = "🇩🇪 Germany";
+"region.fr" = "🇫🇷 France";
+"region.au" = "🇦🇺 Australia";
+"region.ca" = "🇨🇦 Canada";
+"region.private" = "⚡ Private";
+"region.other" = "🌐 Other";
+
+/* Filter */
+"filter.hide_timeout" = "Hide Timeout Nodes";
+"empty.all_nodes_timeout" = "All nodes timed out. Please check your network or refresh subscription";
+
+"sub.empty_title" = "No Subscriptions";
+"sub.empty_desc" = "Add a subscription URL to import proxy nodes";
+"sub.edit" = "Edit";
+"sub.refresh" = "Refresh";
+"sub.delete" = "Delete";
+"sub.active" = "Active";
+"sub.nodes_count" = "nodes";
+"sub.updated_at" = "Updated:";
+"sub.nav_edit" = "Edit Subscription";
+"sub.delete_button" = "Delete Subscription";
+"rule.never_updated" = "Never updated";
