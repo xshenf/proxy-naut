@@ -1,0 +1,4 @@
+/build*
+/ProxyNaut.xcodeproj
+.DS_Store
+/Frameworks
